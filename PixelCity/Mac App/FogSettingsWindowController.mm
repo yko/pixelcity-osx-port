@@ -109,7 +109,7 @@ enum ModeTags { TAG_LINEAR = 1, TAG_EXP, TAG_EXP2 };
 {
     [self assertParam:sender ofClass:NSPopUpButton.class];
     NSPopUpButton *button = sender;
-    NSMenuItem *menuItem = button.selectedCell;
+    NSMenuItem *menuItem = (NSMenuItem *)button.selectedCell;
     NSAssert((menuItem.tag == TAG_LINEAR || menuItem.tag == TAG_EXP || menuItem.tag == TAG_EXP2),
              @"menuItem %@ from button %@ has invalid tag %ld", menuItem, button, (GLlong)menuItem.tag);
     GLenum mode = GL_LINEAR;

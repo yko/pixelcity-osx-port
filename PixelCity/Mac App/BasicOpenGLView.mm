@@ -53,7 +53,7 @@ void glReportError(const char* strLocation)
          NSOpenGLPFAWindow                                      // Windowed
       ,  NSOpenGLPFADoubleBuffer                                // double buffered
       ,  NSOpenGLPFADepthSize, (NSOpenGLPixelFormatAttribute)16 // 16 bit depth buffer
-      ,  (NSOpenGLPixelFormatAttribute)nil
+      ,  (NSOpenGLPixelFormatAttribute)(size_t)nil
     };
     return [[NSOpenGLPixelFormat alloc] initWithAttributes:attributes];
 }
